@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Petty Salon — Nairobi's 24-hour beauty salon. Cornrows, Knotless Braids, Acrylic Nails, Hair Treatments & more. Book via WhatsApp 0722 377327.">
+    <title>Petty Salon | Beauty & Elegance, 24/7</title>
+
+    <!-- Google Fonts: Elegant serif + modern sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           PETTY SALON — MODERN AWARD‑WORTHY STYLES
+           Pink palette, smooth interactions, organic feel.
+           ============================================================ */
+        :root {
+            --pink-50: #fef5f7;
+            --pink-100: #fbeaef;
+            --pink-200: #f4ced7;
+            --pink-300: #eaa3b4;
+            --pink-400: #de7a94;
+            --pink-500: #d14e73;
+            --pink-600: #b83a5c;
+            --pink-700: #9a2c4a;
+            --pink-800: #812640;
+            --pink-900: #6b2238;
+            --white: #ffffff;
+            --off-white: #fdfafb;
+            --black: #1a1a1a;
+            --grey-100: #f5f3f4;
+            --grey-300: #cbc5c7;
+            --grey-500: #8c8386;
+            --grey-700: #4a4547;
+            --font-heading: 'Playfair Display', Georgia, serif;
+            --font-body: 'DM Sans', 'Helvetica Neue', sans-serif;
+            --container-max: 1200px;
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration: 0.4s;
+        }
+
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth;font-size:16px;-webkit-font-smoothing:antialiased}
+        body{font-family:var(--font-body);background:var(--white);color:var(--grey-700);line-height:1.6;overflow-x:hidden}
+        .noise-overlay{position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.03;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E") repeat;background-size:200px 200px}
+
+        .skip-to-content{position:absolute;top:-100%;left:1rem;background:var(--pink-600);color:#fff;padding:.75rem 1.25rem;border-radius:0 0 8px 8px;z-index:10001;font-weight:600;text-decoration:none;transition:top .3s}
+        .skip-to-content:focus{top:0}
+
+        h1,h2,h3{font-family:var(--font-heading);color:var(--black)}
+        .section-title{font-size:clamp(2.4rem,5vw,3.4rem);font-weight:600;line-height:1.15;margin-bottom:1.5rem;letter-spacing:-0.02em}
+        .section-eyebrow{display:block;font-family:var(--font-body);font-size:.875rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;color:var(--pink-600);margin-bottom:1rem}
+
+        .container{max-width:var(--container-max);margin:0 auto;padding:0 2rem}
+        .section-padding{padding:5rem 0}
+
+        .btn{display:inline-flex;align-items:center;justify-content:center;padding:.9rem 2rem;border-radius:100px;font-weight:600;font-size:1rem;text-decoration:none;transition:all var(--duration) var(--ease-out-expo);cursor:pointer;border:none;background:transparent;letter-spacing:.01em}
+        .btn--primary{background:var(--pink-600);color:#fff;box-shadow:0 8px 24px rgba(184,58,92,.2)}
+        .btn--primary:hover{background:var(--pink-700);transform:translateY(-2px);box-shadow:0 12px 32px rgba(184,58,92,.3)}
+        .btn--outline{border:1.5px solid var(--pink-300);color:var(--pink-700)}
+        .btn--outline:hover{background:var(--pink-100);border-color:var(--pink-500)}
+
+        .site-header{position:fixed;top:0;left:0;width:100%;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(0,0,0,.04);transition:background var(--duration)}
+        .header-inner{display:flex;align-items:center;justify-content:space-between;padding:1.2rem 2rem}
+        .logo{display:flex;align-items:center;gap:.5rem;text-decoration:none;color:var(--black)}
+        .logo-icon{font-size:1.6rem;color:var(--pink-500)}
+        .logo-text{font-family:var(--font-heading);font-size:1.6rem;font-weight:700;letter-spacing:-0.01em}
+        .nav-list{display:flex;list-style:none;gap:2.4rem}
+        .nav-link{text-decoration:none;color:var(--grey-700);font-weight:500;font-size:.95rem;position:relative;padding:.3rem 0;transition:color var(--duration)}
+        .nav-link::after{content:'';position:absolute;bottom:0;left:0;width:0%;height:2px;background:var(--pink-500);transition:width var(--duration) var(--ease-out-expo)}
+        .nav-link:hover,.nav-link.active{color:var(--pink-600)}
+        .nav-link:hover::after,.nav-link.active::after{width:100%}
+        .nav-link--cta{background:var(--pink-50);padding:.5rem 1.2rem;border-radius:100px;color:var(--pink-700)}
+        .nav-link--cta:hover{background:var(--pink-100)}
+
+        .menu-toggle{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:.5rem;z-index:110}
+        .menu-toggle-bar{display:block;width:24px;height:2px;background:var(--black);transition:transform var(--duration),opacity var(--duration)}
+        .mobile-nav-overlay{position:fixed;inset:0;background:var(--pink-50);z-index:90;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity var(--duration)}
+        .mobile-nav-overlay.active{opacity:1;pointer-events:auto}
+        .mobile-nav-list{list-style:none;text-align:center}
+        .mobile-nav-link{display:block;font-family:var(--font-heading);font-size:2.2rem;color:var(--black);text-decoration:none;padding:.8rem 0;transition:color var(--duration)}
+        .mobile-nav-link:hover{color:var(--pink-600)}
+        .mobile-nav-contact{margin-top:2rem;text-align:center}
+        .mobile-nav-phone{font-size:1.5rem;font-weight:600;color:var(--pink-700);text-decoration:none}
+
+        .hero-section{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(135deg,var(--pink-100) 0%,var(--pink-50) 60%,var(--white) 100%);padding:8rem 0 4rem}
+        .hero-content{position:relative;z-index:2;max-width:800px}
+        .hero-eyebrow{font-size:.9rem;font-weight:500;text-transform:uppercase;letter-spacing:.12em;color:var(--pink-700);margin-bottom:1.5rem;display:block}
+        .hero-title{font-size:clamp(3.5rem,8vw,6rem);font-weight:700;line-height:1.05;margin-bottom:1.8rem}
+        .hero-title-line{display:block}
+        .hero-title-line--accent{color:var(--pink-600)}
+        .hero-subtitle{font-size:1.2rem;max-width:520px;color:var(--grey-700);margin-bottom:2.5rem}
+        .hero-ctas{display:flex;gap:1rem;flex-wrap:wrap}
+        .hero-shapes{position:absolute;inset:0;pointer-events:none}
+        .hero-shape{position:absolute;border-radius:50%;opacity:.16;background:var(--pink-300)}
+        .hero-shape--1{width:400px;height:400px;top:-100px;right:-120px}
+        .hero-shape--2{width:200px;height:200px;bottom:60px;left:-50px;background:var(--pink-200)}
+        .hero-shape--3{width:180px;height:180px;top:20%;left:60%;background:var(--pink-400);opacity:.1}
+        .hero-shape--4{width:280px;height:280px;bottom:-80px;right:30%;background:var(--pink-500);opacity:.08}
+        .hero-shape--5{width:120px;height:120px;top:15%;left:10%;background:var(--pink-300);opacity:.2}
+        .scroll-indicator{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.5rem;color:var(--grey-500);font-size:.8rem}
+        .scroll-indicator-line{width:1px;height:30px;background:var(--pink-400);animation:scrollPulse 2s infinite}
+        @keyframes scrollPulse{0%,100%{opacity:.4}50%{opacity:1}}
+
+        .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:center}
+        .about-visual{position:relative}
+        .about-frame{width:100%;padding-bottom:120%;background:var(--pink-100);border-radius:24px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+        .about-frame-inner{text-align:center;color:var(--pink-700)}
+        .about-frame-icon{font-size:3rem;display:block}
+        .about-accent-shape{width:120px;height:120px;background:var(--pink-300);border-radius:50%;position:absolute;bottom:-20px;right:-20px;z-index:-1;opacity:.5}
+        .about-description{font-size:1.05rem;margin-bottom:1.2rem}
+        .about-highlights{display:flex;gap:2rem;margin-top:2rem}
+        .highlight-item{text-align:center}
+        .highlight-value{font-family:var(--font-heading);font-size:1.8rem;font-weight:600;color:var(--pink-600);display:block}
+        .highlight-label{font-size:.8rem;text-transform:uppercase;letter-spacing:.06em;color:var(--grey-500)}
+
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;margin-top:3rem}
+        .service-card{background:var(--white);border-radius:20px;overflow:hidden;border:1px solid var(--pink-100);transition:all .4s var(--ease-out-expo);display:flex;flex-direction:column}
+        .service-card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(184,58,92,.08);border-color:var(--pink-300)}
+        .service-card-img{height:200px;overflow:hidden}
+        .service-card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out-expo)}
+        .service-card:hover .service-card-img img{transform:scale(1.05)}
+        .service-card-body{padding:1.8rem;text-align:center;flex:1}
+        .service-card-title{font-size:1.4rem;margin-bottom:.5rem}
+        .service-card-desc{color:var(--grey-500);font-size:.95rem;margin-bottom:1rem}
+        .service-card-highlight{display:inline-block;background:var(--pink-50);color:var(--pink-700);padding:.3rem 1rem;border-radius:100px;font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+
+        .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;margin-top:3rem}
+        .gallery-item{position:relative;border-radius:16px;overflow:hidden;aspect-ratio:3/4;background:var(--pink-100)}
+        .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease-out-expo)}
+        .gallery-item:hover img{transform:scale(1.07)}
+        .gallery-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.5),transparent);display:flex;align-items:flex-end;padding:1.5rem;opacity:0;transition:opacity .4s}
+        .gallery-item:hover .gallery-overlay{opacity:1}
+        .gallery-caption{color:#fff;font-weight:500;font-size:1rem}
+
+        .amenities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;margin-top:3rem}
+        .amenity-category{background:var(--pink-50);border-radius:16px;padding:2rem}
+        .amenity-category-title{font-size:1rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--pink-700);margin-bottom:1.2rem}
+        .amenity-list{list-style:none;font-size:.95rem}
+        .amenity-list li{padding:.4rem 0;display:flex;align-items:baseline;gap:.5rem}
+
+        .location-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3rem;margin-top:3rem}
+        .location-map-wrapper{position:relative;border-radius:20px;overflow:hidden;height:380px;border:1px solid var(--pink-100)}
+        .location-map{width:100%;height:100%;border:0;filter:grayscale(0.1)}
+        .map-overlay{position:absolute;inset:0;background:transparent;pointer-events:none}
+        .location-card{background:var(--pink-50);padding:2.5rem;border-radius:20px;height:fit-content}
+        .location-card-title{font-size:1.4rem;margin-bottom:1rem}
+        .location-address{font-style:normal;font-size:1.1rem;line-height:1.6;margin-bottom:1.5rem}
+
+        .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2rem;margin-top:3rem}
+        .contact-card{background:var(--white);border:1px solid var(--pink-100);border-radius:20px;padding:2rem;text-align:center}
+        .contact-card--primary{background:var(--pink-600);color:#fff;border:none}
+        .contact-card--primary .contact-card-title,.contact-card--primary .contact-phone,.contact-card--primary .contact-hours{color:#fff}
+        .contact-card-icon{font-size:2rem;margin-bottom:1rem}
+        .contact-card-title{font-size:1.3rem;margin-bottom:.8rem}
+        .contact-phone{font-family:var(--font-heading);font-size:2rem;font-weight:600;color:var(--pink-600);text-decoration:none;display:block;margin-bottom:.8rem}
+        .payment-list{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem;text-align:left;font-size:.95rem}
+
+        .whatsapp-float{position:fixed;bottom:2rem;right:2rem;z-index:200;background:#25D366;color:#fff;width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px rgba(37,211,102,.3);transition:transform .3s,box-shadow .3s;text-decoration:none}
+        .whatsapp-float:hover{transform:scale(1.1);box-shadow:0 12px 28px rgba(37,211,102,.4)}
+        .whatsapp-float svg{width:32px;height:32px;fill:#fff}
+
+        .site-footer{background:var(--pink-50);padding:3rem 0 1.5rem;position:relative}
+        .footer-inner{display:flex;flex-wrap:wrap;gap:2rem;justify-content:space-between;align-items:center;margin-bottom:2rem}
+        .footer-logo{font-family:var(--font-heading);font-size:1.6rem;font-weight:700;color:var(--pink-700)}
+        .footer-nav{display:flex;gap:2rem;flex-wrap:wrap}
+        .footer-link{color:var(--grey-700);text-decoration:none;font-size:.9rem}
+        .footer-bottom{border-top:1px solid var(--pink-200);padding-top:1.5rem;display:flex;justify-content:space-between;font-size:.85rem;color:var(--grey-500)}
+        .back-to-top{position:absolute;right:2rem;bottom:2rem;background:var(--white);border:1px solid var(--pink-200);width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;transform:translateY(10px);transition:all .3s;color:var(--pink-600)}
+        .back-to-top.visible{opacity:1;transform:translateY(0)}
+
+        @media(max-width:900px){
+            .main-nav{display:none}
+            .menu-toggle{display:flex}
+            .about-grid,.location-grid{grid-template-columns:1fr}
+            .location-map-wrapper{height:280px}
+            .gallery-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+        }
+        @media(max-width:600px){
+            .section-padding{padding:4rem 0}
+            .hero-ctas{flex-direction:column;align-items:flex-start}
+            .footer-bottom{flex-direction:column;gap:.5rem}
+            .whatsapp-float{width:50px;height:50px;bottom:1.5rem;right:1.5rem}
+            .whatsapp-float svg{width:28px;height:28px}
+        }
+    </style>
+</head>
+<body>
+    <div class="noise-overlay" aria-hidden="true"></div>
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+    <!-- ========== HEADER ========== -->
+    <header class="site-header" role="banner">
+        <div class="header-inner container">
+            <a href="#hero" class="logo" aria-label="Petty Salon – Home">
+                <span class="logo-icon" aria-hidden="true">✦</span>
+                <span class="logo-text">Petty Salon</span>
+            </a>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#amenities" class="nav-link">Amenities</a></li>
+                    <li><a href="#location" class="nav-link">Location</a></li>
+                    <li><a href="#contact" class="nav-link nav-link--cta">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile overlay -->
+    <div class="mobile-nav-overlay" aria-hidden="true">
+        <nav class="mobile-nav">
+            <ul class="mobile-nav-list">
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#services" class="mobile-nav-link">Services</a></li>
+                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
+                <li><a href="#amenities" class="mobile-nav-link">Amenities</a></li>
+                <li><a href="#location" class="mobile-nav-link">Location</a></li>
+                <li><a href="#contact" class="mobile-nav-link mobile-nav-link--cta">Get in Touch</a></li>
+            </ul>
+            <div class="mobile-nav-contact">
+                <a href="tel:+254722377327" class="mobile-nav-phone">0722 377327</a>
+                <span>Open 24 Hours</span>
+            </div>
+        </nav>
+    </div>
+
+    <!-- ========== MAIN ========== -->
+    <main id="main-content">
+        <!-- Hero -->
+        <section id="hero" class="hero-section" aria-labelledby="hero-heading">
+            <div class="hero-shapes" aria-hidden="true">
+                <div class="hero-shape hero-shape--1"></div>
+                <div class="hero-shape hero-shape--2"></div>
+                <div class="hero-shape hero-shape--3"></div>
+                <div class="hero-shape hero-shape--4"></div>
+                <div class="hero-shape hero-shape--5"></div>
+            </div>
+            <div class="hero-content container">
+                <span class="hero-eyebrow">Nairobi's Finest Beauty Destination</span>
+                <h1 id="hero-heading" class="hero-title">
+                    <span class="hero-title-line">Where Beauty</span>
+                    <span class="hero-title-line hero-title-line--accent">Meets Elegance</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Premium beauty services at <strong>Kenyatta Market Stall 321</strong>. Open <em>24 hours</em> — because beauty never waits.
+                </p>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/254722377327?text=Hello%20Petty%20Salon%2C%20I%20would%20like%20to%20book%20an%20appointment." class="btn btn--primary" target="_blank" rel="noopener">Book via WhatsApp</a>
+                    <a href="#location" class="btn btn--outline">Get Directions</a>
+                </div>
+                <div class="scroll-indicator" aria-hidden="true">
+                    <span class="scroll-indicator-text">Scroll to explore</span>
+                    <span class="scroll-indicator-line"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about" class="about-section section-padding" aria-labelledby="about-heading">
+            <div class="container about-grid">
+                <div class="about-visual" aria-hidden="true">
+                    <div class="about-frame">
+                        <div class="about-frame-inner">
+                            <span class="about-frame-icon">🌸</span>
+                            <span class="about-frame-label">Trusted Since 2018</span>
+                        </div>
+                    </div>
+                    <div class="about-accent-shape"></div>
+                </div>
+                <div class="about-text">
+                    <span class="section-eyebrow">About Us</span>
+                    <h2 id="about-heading" class="section-title">A Sanctuary of<br>Beauty & Care</h2>
+                    <p class="about-description">
+                        Nestled in the heart of <strong>Kenyatta Market</strong> on Mtongwe Road, Petty Salon is more than a beauty destination — it's a space where you're welcomed as family. We blend expert technique with heartfelt hospitality to bring out your most confident self.
+                    </p>
+                    <p class="about-description">
+                        Our doors are open <strong>24 hours a day</strong>, every day. Whether you're an early bird or a night owl, we're here to serve you with the same unwavering quality and attention to detail.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-value">24/7</span>
+                            <span class="highlight-label">Open Daily</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-value">♿</span>
+                            <span class="highlight-label">Fully Accessible</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-value">👶</span>
+                            <span class="highlight-label">Kid‑Friendly</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services -->
+        <section id="services" class="services-section section-padding" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-eyebrow">What We Offer</span>
+                    <h2 id="services-heading" class="section-title">Beauty Services<br>Tailored for You</h2>
+                    <p style="max-width:600px;margin-top:1rem">From intricate braids to flawless nails, every treatment is designed to enhance your natural beauty. Click any service to book instantly via WhatsApp.</p>
+                </div>
+                <div class="services-grid">
+                    <!-- 
+                      SERVICE CARDS: Each card uses a placeholder image from picsum.photos with a fixed seed
+                      to ensure consistent results. Replace the src with real photos of African women
+                      receiving each specific service. All images should be royalty-free or owned by you.
+                    -->
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=101" alt="African woman with cornrows braided hairstyle" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Cornrows</h3>
+                            <p class="service-card-desc">Intricate, close-to-scalp braiding in straight lines or geometric patterns.</p>
+                            <span class="service-card-highlight">Classic</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=102" alt="African woman with stitch lines braids" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Stitch Lines</h3>
+                            <p class="service-card-desc">Precision feed‑in braids with clean, defined stitch patterns.</p>
+                            <span class="service-card-highlight">Trending</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=103" alt="African woman with knotless braids" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Knotless Braids</h3>
+                            <p class="service-card-desc">Lightweight, tension‑free braids that start with your natural hair.</p>
+                            <span class="service-card-highlight">Popular</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=104" alt="African woman with twist braids" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Twist Braids</h3>
+                            <p class="service-card-desc">Two‑strand twists that create a elegant, rope‑like texture.</p>
+                            <span class="service-card-highlight">Versatile</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=105" alt="African woman with bubble braids hairstyle" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Bubble Braids</h3>
+                            <p class="service-card-desc">Playful, puffed sections created along the length of ponytails or braids.</p>
+                            <span class="service-card-highlight">Playful</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=106" alt="African woman with hair weaving" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Weaving</h3>
+                            <p class="service-card-desc">Expert weft installation for added length, volume, and styling versatility.</p>
+                            <span class="service-card-highlight">Glamorous</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=107" alt="African woman receiving hair relaxer treatment" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Hair Relaxers</h3>
+                            <p class="service-card-desc">Professional straightening treatments for smooth, manageable hair.</p>
+                            <span class="service-card-highlight">Smoothing</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=108" alt="African woman with acrylic nails" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Acrylic Nails</h3>
+                            <p class="service-card-desc">Durable, sculpted nail extensions with endless design possibilities.</p>
+                            <span class="service-card-highlight">Best Seller</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=109" alt="African woman receiving hair treatment" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Hair Treatments</h3>
+                            <p class="service-card-desc">Deep conditioning, protein, and scalp therapies for healthy, vibrant hair.</p>
+                            <span class="service-card-highlight">Restorative</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=110" alt="African woman with colored hair" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Hair Coloring</h3>
+                            <p class="service-card-desc">Vibrant permanent, semi‑permanent, and highlight color services.</p>
+                            <span class="service-card-highlight">Bold</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=111" alt="African woman hair styling in salon" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Hair Styling</h3>
+                            <p class="service-card-desc">Blowouts, updos, and sleek styles for any occasion.</p>
+                            <span class="service-card-highlight">Elegant</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=112" alt="African woman with hair extensions" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Hair Extensions</h3>
+                            <p class="service-card-desc">Clip‑ins, tape‑ins, and bonded extensions for instant length and volume.</p>
+                            <span class="service-card-highlight">Luxurious</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=113" alt="African woman receiving manicure" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Manicure</h3>
+                            <p class="service-card-desc">Classic nail care with shaping, cuticle grooming, and polish.</p>
+                            <span class="service-card-highlight">Essential</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=114" alt="African woman receiving pedicure" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Pedicure</h3>
+                            <p class="service-card-desc">Relaxing foot care with exfoliation, nail shaping, and polish.</p>
+                            <span class="service-card-highlight">Relaxing</span>
+                        </div>
+                    </article>
+                    <article class="service-card">
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=115" alt="African woman with gel polish nails" loading="lazy"></div>
+                        <div class="service-card-body">
+                            <h3 class="service-card-title">Gel Polish</h3>
+                            <p class="service-card-desc">Long‑lasting, chip‑resistant gel color for hands and feet.</p>
+                            <span class="service-card-highlight">Long‑Lasting</span>
+                        </div>
+                    </article>
+                </div>
+                <!-- Booking CTA for services -->
+                <div style="text-align:center;margin-top:3rem">
+                    <a href="https://wa.me/254722377327?text=Hello%2C%20I%27m%20interested%20in%20your%20beauty%20services." class="btn btn--primary" target="_blank" rel="noopener">Book Any Service on WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery -->
+        <section id="gallery" class="gallery-section section-padding" aria-labelledby="gallery-heading" style="background:var(--pink-50)">
+            <div class="container">
+                <span class="section-eyebrow">Our Work</span>
+                <h2 id="gallery-heading" class="section-title">Beauty in Every Detail</h2>
+                <p style="max-width:600px;margin-bottom:2rem">Real transformations, real women. Our gallery showcases the artistry and care we bring to every appointment.</p>
+                <div class="gallery-grid">
+                    <!-- Gallery images representing various services -->
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=201" alt="African woman with stunning cornrow braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Cornrows</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=202" alt="African woman with knotless braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Knotless Braids</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=203" alt="African woman with twist braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Twist Braids</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=204" alt="African woman with acrylic nails" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Acrylic Nails</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=205" alt="African woman with stitch line braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Stitch Lines</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=206" alt="African woman with gel polish manicure" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Gel Polish</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=207" alt="African woman with hair extensions" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Hair Extensions</span></div></div>
+                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=208" alt="African woman with bubble braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Bubble Braids</span></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Amenities & Accessibility -->
+        <section id="amenities" class="amenities-section section-padding" aria-labelledby="amenities-heading">
+            <div class="container">
+                <span class="section-eyebrow">Your Comfort Matters</span>
+                <h2 id="amenities-heading" class="section-title">Amenities & Accessibility</h2>
+                <div class="amenities-grid">
+                    <div class="amenity-category">
+                        <h3 class="amenity-category-title">Facilities</h3>
+                        <ul class="amenity-list">
+                            <li>🚻 Gender‑neutral toilets</li>
+                            <li>🚽 Clean, well‑maintained toilets</li>
+                            <li>📶 Paid Wi‑Fi</li>
+                            <li>♻️ Plastic bottle recycling</li>
+                        </ul>
+                    </div>
+                    <div class="amenity-category amenity-category--accessibility">
+                        <h3 class="amenity-category-title">Accessibility</h3>
+                        <ul class="amenity-list">
+                            <li>🅿️ Wheelchair‑accessible car park</li>
+                            <li>🚪 Wheelchair‑accessible entrance</li>
+                            <li>🪑 Wheelchair‑accessible seating</li>
+                            <li>🛁 Wheelchair‑accessible toilet</li>
+                            <li>🎧 Assisted listening devices</li>
+                            <li>🔄 Assistive hearing loop</li>
+                        </ul>
+                    </div>
+                    <div class="amenity-category">
+                        <h3 class="amenity-category-title">Parking</h3>
+                        <ul class="amenity-list">
+                            <li>🚗 On‑site parking</li>
+                            <li>🏢 Paid parking lot nearby</li>
+                            <li>🅿️ Paid street parking</li>
+                        </ul>
+                    </div>
+                    <div class="amenity-category">
+                        <h3 class="amenity-category-title">Families & Kids</h3>
+                        <ul class="amenity-list">
+                            <li>🧸 Good for kids</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Location -->
+        <section id="location" class="location-section section-padding" aria-labelledby="location-heading">
+            <div class="container">
+                <span class="section-eyebrow">Find Us</span>
+                <h2 id="location-heading" class="section-title">Come Say Hello</h2>
+                <div class="location-grid">
+                    <div class="location-map-wrapper">
+                        <iframe class="location-map" src="https://maps.google.com/maps?q=Kenyatta+Market+Stall+321+Mtongwe+Rd+Nairobi&t=&z=15&ie=UTF8&iwloc=&output=embed" title="Map of Petty Salon" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div class="map-overlay" aria-hidden="true"></div>
+                    </div>
+                    <div class="location-info">
+                        <div class="location-card">
+                            <h3 class="location-card-title">Our Address</h3>
+                            <address class="location-address">Kenyatta Market, Stall 321<br>Mtongwe Road, Nairobi, Kenya</address>
+                            <a href="https://maps.app.goo.gl/Txq27bQAiiZLFupz8" class="btn btn--primary btn--small" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Payments -->
+        <section id="contact" class="contact-section section-padding" aria-labelledby="contact-heading">
+            <div class="container">
+                <span class="section-eyebrow">Get in Touch</span>
+                <h2 id="contact-heading" class="section-title">Let's Connect</h2>
+                <div class="contact-grid">
+                    <div class="contact-card contact-card--primary">
+                        <div class="contact-card-icon">📞</div>
+                        <h3 class="contact-card-title">Call & WhatsApp</h3>
+                        <a href="tel:+254722377327" class="contact-phone">0722 377327</a>
+                        <p class="contact-hours"><strong>Open 24 Hours</strong><br>Every day, weekends & holidays</p>
+                        <a href="https://wa.me/254722377327?text=Hello%20Petty%20Salon%2C%20I%27d%20like%20to%20book%20an%20appointment." class="btn btn--primary" style="margin-top:1rem;background:#25D366;box-shadow:0 8px 20px rgba(37,211,102,.25)" target="_blank">Chat on WhatsApp</a>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">💳</div>
+                        <h3 class="contact-card-title">Payment Methods</h3>
+                        <ul class="payment-list">
+                            <li>💵 Cash</li>
+                            <li>📱 M‑Pesa</li>
+                            <li>🏦 Paybill</li>
+                            <li>🏧 Bank Transfer</li>
+                        </ul>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-card-icon">📍</div>
+                        <h3 class="contact-card-title">Visit Us</h3>
+                        <p>Kenyatta Market, Stall 321<br>Mtongwe Road, Nairobi</p>
+                        <p style="font-size:0.9rem;margin-top:.5rem">Walk‑ins welcome • Appointments available<br>On‑site & out‑site services</p>
+                    </div>
+                </div>
+                <!-- Planning info -->
+                <div style="text-align:center;margin-top:2rem;font-size:0.95rem;color:var(--grey-700)">
+                    <strong>Planning:</strong> Appointment required for some services · Walk‑ins always welcome · Plastic bottle recycling on‑site
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/254722377327?text=Hello%2C%20I%20want%20to%20book%20a%20beauty%20service." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Book on WhatsApp">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-logo">Petty Salon</span>
+                <p class="footer-tagline">Beauty that welcomes everyone, at any hour.</p>
+            </div>
+            <nav class="footer-nav" aria-label="Footer navigation">
+                <a href="#about" class="footer-link">About</a>
+                <a href="#services" class="footer-link">Services</a>
+                <a href="#gallery" class="footer-link">Gallery</a>
+                <a href="#amenities" class="footer-link">Amenities</a>
+                <a href="#location" class="footer-link">Location</a>
+                <a href="#contact" class="footer-link">Contact</a>
+            </nav>
+            <div class="footer-bottom">
+                <span>&copy; <span id="current-year"></span> Petty Salon. All rights reserved.</span>
+                <span class="footer-credit">Kenyatta Market • Stall 321 • Mtongwe Rd, Nairobi</span>
+            </div>
+        </div>
+        <button class="back-to-top" aria-label="Back to top">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 16V4M10 4L4 10M10 4l6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+    </footer>
+
+    <script>
+        // ============================================================
+        // PETTY SALON — VANILLA JAVASCRIPT
+        // ============================================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.querySelector('.site-header');
+            const navLinks = document.querySelectorAll('.nav-link');
+            const mobileToggle = document.querySelector('.menu-toggle');
+            const mobileOverlay = document.querySelector('.mobile-nav-overlay');
+            const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+            const backToTop = document.querySelector('.back-to-top');
+            const yearSpan = document.getElementById('current-year');
+
+            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+            // Mobile menu toggle
+            mobileToggle.addEventListener('click', () => {
+                const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+                mobileToggle.setAttribute('aria-expanded', !expanded);
+                mobileOverlay.classList.toggle('active');
+                document.body.style.overflow = expanded ? '' : 'hidden';
+            });
+            mobileLinks.forEach(link => link.addEventListener('click', () => {
+                mobileOverlay.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }));
+
+            // Active nav link on scroll (Intersection Observer)
+            const sections = document.querySelectorAll('section[id]');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        navLinks.forEach(link => {
+                            link.classList.remove('active');
+                            if (link.getAttribute('href') === `#${id}`) link.classList.add('active');
+                        });
+                    }
+                });
+            }, { rootMargin: '0px 0px -60% 0px' });
+            sections.forEach(section => observer.observe(section));
+
+            // Back to top
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 600) backToTop.classList.add('visible');
+                else backToTop.classList.remove('visible');
+                header.style.background = window.scrollY > 20 ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.92)';
+                header.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.04)' : 'none';
+            });
+            backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        target.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // Service cards: clicking any card opens WhatsApp booking
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    window.open('https://wa.me/254722377327?text=Hello%2C%20I%20am%20interested%20in%20this%20beauty%20service.', '_blank');
+                });
+                card.style.cursor = 'pointer';
+            });
+        });
+    </script>
+</body>
+</html>
