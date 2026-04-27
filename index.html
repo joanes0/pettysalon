@@ -6,16 +6,12 @@
     <meta name="description" content="Petty Salon — Nairobi's 24-hour beauty salon. Cornrows, Knotless Braids, Acrylic Nails, Hair Treatments & more. Book via WhatsApp 0722 377327.">
     <title>Petty Salon | Beauty & Elegance, 24/7</title>
 
-    <!-- Google Fonts: Elegant serif + modern sans -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================================
-           PETTY SALON — MODERN AWARD‑WORTHY STYLES
-           Pink palette, smooth interactions, organic feel.
-           ============================================================ */
         :root {
             --pink-50: #fef5f7;
             --pink-100: #fbeaef;
@@ -106,9 +102,7 @@
 
         .about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem;align-items:center}
         .about-visual{position:relative}
-        .about-frame{width:100%;padding-bottom:120%;background:var(--pink-100);border-radius:24px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
-        .about-frame-inner{text-align:center;color:var(--pink-700)}
-        .about-frame-icon{font-size:3rem;display:block}
+        .about-profile-img{width:100%;border-radius:24px;display:block;object-fit:cover;aspect-ratio:4/5;box-shadow:0 20px 40px rgba(184,58,92,.1)}
         .about-accent-shape{width:120px;height:120px;background:var(--pink-300);border-radius:50%;position:absolute;bottom:-20px;right:-20px;z-index:-1;opacity:.5}
         .about-description{font-size:1.05rem;margin-bottom:1.2rem}
         .about-highlights{display:flex;gap:2rem;margin-top:2rem}
@@ -191,7 +185,6 @@
     <div class="noise-overlay" aria-hidden="true"></div>
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-    <!-- ========== HEADER ========== -->
     <header class="site-header" role="banner">
         <div class="header-inner container">
             <a href="#hero" class="logo" aria-label="Petty Salon – Home">
@@ -216,7 +209,6 @@
         </div>
     </header>
 
-    <!-- Mobile overlay -->
     <div class="mobile-nav-overlay" aria-hidden="true">
         <nav class="mobile-nav">
             <ul class="mobile-nav-list">
@@ -234,9 +226,7 @@
         </nav>
     </div>
 
-    <!-- ========== MAIN ========== -->
     <main id="main-content">
-        <!-- Hero -->
         <section id="hero" class="hero-section" aria-labelledby="hero-heading">
             <div class="hero-shapes" aria-hidden="true">
                 <div class="hero-shape hero-shape--1"></div>
@@ -265,16 +255,10 @@
             </div>
         </section>
 
-        <!-- About -->
         <section id="about" class="about-section section-padding" aria-labelledby="about-heading">
             <div class="container about-grid">
                 <div class="about-visual" aria-hidden="true">
-                    <div class="about-frame">
-                        <div class="about-frame-inner">
-                            <span class="about-frame-icon">🌸</span>
-                            <span class="about-frame-label">Trusted Since 2018</span>
-                        </div>
-                    </div>
+                    <img src="beauty/profile.jpg" alt="Petty Salon stylist" class="about-profile-img">
                     <div class="about-accent-shape"></div>
                 </div>
                 <div class="about-text">
@@ -304,22 +288,14 @@
             </div>
         </section>
 
-        <!-- Services -->
         <section id="services" class="services-section section-padding" aria-labelledby="services-heading">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-eyebrow">What We Offer</span>
-                    <h2 id="services-heading" class="section-title">Beauty Services<br>Tailored for You</h2>
-                    <p style="max-width:600px;margin-top:1rem">From intricate braids to flawless nails, every treatment is designed to enhance your natural beauty. Click any service to book instantly via WhatsApp.</p>
-                </div>
+                <span class="section-eyebrow">What We Offer</span>
+                <h2 id="services-heading" class="section-title">Beauty Services<br>Tailored for You</h2>
+                <p style="max-width:600px;margin-top:1rem">From intricate braids to flawless nails, every treatment is designed to enhance your natural beauty. Click any service to book instantly via WhatsApp.</p>
                 <div class="services-grid">
-                    <!-- 
-                      SERVICE CARDS: Each card uses a placeholder image from picsum.photos with a fixed seed
-                      to ensure consistent results. Replace the src with real photos of African women
-                      receiving each specific service. All images should be royalty-free or owned by you.
-                    -->
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=101" alt="African woman with cornrows braided hairstyle" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/corncrow1.jpg" alt="Cornrows" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Cornrows</h3>
                             <p class="service-card-desc">Intricate, close-to-scalp braiding in straight lines or geometric patterns.</p>
@@ -327,7 +303,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=102" alt="African woman with stitch lines braids" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/stitch lines1.jpeg" alt="Stitch Lines" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Stitch Lines</h3>
                             <p class="service-card-desc">Precision feed‑in braids with clean, defined stitch patterns.</p>
@@ -335,7 +311,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=103" alt="African woman with knotless braids" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/knotles1.jpg" alt="Knotless Braids" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Knotless Braids</h3>
                             <p class="service-card-desc">Lightweight, tension‑free braids that start with your natural hair.</p>
@@ -343,7 +319,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=104" alt="African woman with twist braids" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/twist braids1.jpg" alt="Twist Braids" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Twist Braids</h3>
                             <p class="service-card-desc">Two‑strand twists that create a elegant, rope‑like texture.</p>
@@ -351,7 +327,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=105" alt="African woman with bubble braids hairstyle" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/Bubble-braids1.jpeg" alt="Bubble Braids" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Bubble Braids</h3>
                             <p class="service-card-desc">Playful, puffed sections created along the length of ponytails or braids.</p>
@@ -359,7 +335,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=106" alt="African woman with hair weaving" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/hair extension.jpg" alt="Weaving" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Weaving</h3>
                             <p class="service-card-desc">Expert weft installation for added length, volume, and styling versatility.</p>
@@ -367,7 +343,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=107" alt="African woman receiving hair relaxer treatment" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/hair relaxers.jpeg" alt="Hair Relaxers" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Hair Relaxers</h3>
                             <p class="service-card-desc">Professional straightening treatments for smooth, manageable hair.</p>
@@ -375,7 +351,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=108" alt="African woman with acrylic nails" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/Nail technology.jpg" alt="Acrylic Nails" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Acrylic Nails</h3>
                             <p class="service-card-desc">Durable, sculpted nail extensions with endless design possibilities.</p>
@@ -383,7 +359,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=109" alt="African woman receiving hair treatment" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/hair treatment.jpg" alt="Hair Treatments" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Hair Treatments</h3>
                             <p class="service-card-desc">Deep conditioning, protein, and scalp therapies for healthy, vibrant hair.</p>
@@ -391,7 +367,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=110" alt="African woman with colored hair" loading="lazy"></div>
+                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=110" alt="Hair Coloring" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Hair Coloring</h3>
                             <p class="service-card-desc">Vibrant permanent, semi‑permanent, and highlight color services.</p>
@@ -399,7 +375,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=111" alt="African woman hair styling in salon" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/hair styling.jpg" alt="Hair Styling" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Hair Styling</h3>
                             <p class="service-card-desc">Blowouts, updos, and sleek styles for any occasion.</p>
@@ -407,7 +383,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=112" alt="African woman with hair extensions" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/hair extension.jpg" alt="Hair Extensions" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Hair Extensions</h3>
                             <p class="service-card-desc">Clip‑ins, tape‑ins, and bonded extensions for instant length and volume.</p>
@@ -415,7 +391,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=113" alt="African woman receiving manicure" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/Nail technology.jpg" alt="Manicure" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Manicure</h3>
                             <p class="service-card-desc">Classic nail care with shaping, cuticle grooming, and polish.</p>
@@ -423,7 +399,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=114" alt="African woman receiving pedicure" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/pedicure.jpg" alt="Pedicure" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Pedicure</h3>
                             <p class="service-card-desc">Relaxing foot care with exfoliation, nail shaping, and polish.</p>
@@ -431,7 +407,7 @@
                         </div>
                     </article>
                     <article class="service-card">
-                        <div class="service-card-img"><img src="https://picsum.photos/400/300?random=115" alt="African woman with gel polish nails" loading="lazy"></div>
+                        <div class="service-card-img"><img src="beauty/gelpolish.jpg" alt="Gel Polish" loading="lazy"></div>
                         <div class="service-card-body">
                             <h3 class="service-card-title">Gel Polish</h3>
                             <p class="service-card-desc">Long‑lasting, chip‑resistant gel color for hands and feet.</p>
@@ -439,34 +415,30 @@
                         </div>
                     </article>
                 </div>
-                <!-- Booking CTA for services -->
                 <div style="text-align:center;margin-top:3rem">
                     <a href="https://wa.me/254722377327?text=Hello%2C%20I%27m%20interested%20in%20your%20beauty%20services." class="btn btn--primary" target="_blank" rel="noopener">Book Any Service on WhatsApp</a>
                 </div>
             </div>
         </section>
 
-        <!-- Gallery -->
         <section id="gallery" class="gallery-section section-padding" aria-labelledby="gallery-heading" style="background:var(--pink-50)">
             <div class="container">
                 <span class="section-eyebrow">Our Work</span>
                 <h2 id="gallery-heading" class="section-title">Beauty in Every Detail</h2>
                 <p style="max-width:600px;margin-bottom:2rem">Real transformations, real women. Our gallery showcases the artistry and care we bring to every appointment.</p>
                 <div class="gallery-grid">
-                    <!-- Gallery images representing various services -->
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=201" alt="African woman with stunning cornrow braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Cornrows</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=202" alt="African woman with knotless braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Knotless Braids</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=203" alt="African woman with twist braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Twist Braids</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=204" alt="African woman with acrylic nails" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Acrylic Nails</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=205" alt="African woman with stitch line braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Stitch Lines</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=206" alt="African woman with gel polish manicure" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Gel Polish</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=207" alt="African woman with hair extensions" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Hair Extensions</span></div></div>
-                    <div class="gallery-item"><img src="https://picsum.photos/400/600?random=208" alt="African woman with bubble braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Bubble Braids</span></div></div>
+                    <div class="gallery-item"><img src="beauty/cornrow2.jpg" alt="Cornrows" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Cornrows</span></div></div>
+                    <div class="gallery-item"><img src="beauty/knotles2.jpg" alt="Knotless Braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Knotless Braids</span></div></div>
+                    <div class="gallery-item"><img src="beauty/twist braids2.jpg" alt="Twist Braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Twist Braids</span></div></div>
+                    <div class="gallery-item"><img src="beauty/stitch lines2.jpg" alt="Stitch Lines" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Stitch Lines</span></div></div>
+                    <div class="gallery-item"><img src="beauty/Bubble-braids-on-natural-hair (1).jpeg" alt="Bubble Braids" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Bubble Braids</span></div></div>
+                    <div class="gallery-item"><img src="beauty/Nail technology.jpg" alt="Acrylic Nails" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Acrylic Nails</span></div></div>
+                    <div class="gallery-item"><img src="beauty/hair extension.jpg" alt="Hair Extensions" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Hair Extensions</span></div></div>
+                    <div class="gallery-item"><img src="beauty/buble braids 2.jpg" alt="Bubble Braids style" loading="lazy"><div class="gallery-overlay"><span class="gallery-caption">Bubble Braids</span></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- Amenities & Accessibility -->
         <section id="amenities" class="amenities-section section-padding" aria-labelledby="amenities-heading">
             <div class="container">
                 <span class="section-eyebrow">Your Comfort Matters</span>
@@ -481,7 +453,7 @@
                             <li>♻️ Plastic bottle recycling</li>
                         </ul>
                     </div>
-                    <div class="amenity-category amenity-category--accessibility">
+                    <div class="amenity-category">
                         <h3 class="amenity-category-title">Accessibility</h3>
                         <ul class="amenity-list">
                             <li>🅿️ Wheelchair‑accessible car park</li>
@@ -510,7 +482,6 @@
             </div>
         </section>
 
-        <!-- Location -->
         <section id="location" class="location-section section-padding" aria-labelledby="location-heading">
             <div class="container">
                 <span class="section-eyebrow">Find Us</span>
@@ -531,7 +502,6 @@
             </div>
         </section>
 
-        <!-- Contact & Payments -->
         <section id="contact" class="contact-section section-padding" aria-labelledby="contact-heading">
             <div class="container">
                 <span class="section-eyebrow">Get in Touch</span>
@@ -561,7 +531,6 @@
                         <p style="font-size:0.9rem;margin-top:.5rem">Walk‑ins welcome • Appointments available<br>On‑site & out‑site services</p>
                     </div>
                 </div>
-                <!-- Planning info -->
                 <div style="text-align:center;margin-top:2rem;font-size:0.95rem;color:var(--grey-700)">
                     <strong>Planning:</strong> Appointment required for some services · Walk‑ins always welcome · Plastic bottle recycling on‑site
                 </div>
@@ -569,12 +538,10 @@
         </section>
     </main>
 
-    <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/254722377327?text=Hello%2C%20I%20want%20to%20book%20a%20beauty%20service." class="whatsapp-float" target="_blank" rel="noopener" aria-label="Book on WhatsApp">
         <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
-    <!-- Footer -->
     <footer class="site-footer" role="contentinfo">
         <div class="container footer-inner">
             <div class="footer-brand">
@@ -600,9 +567,6 @@
     </footer>
 
     <script>
-        // ============================================================
-        // PETTY SALON — VANILLA JAVASCRIPT
-        // ============================================================
         document.addEventListener('DOMContentLoaded', () => {
             const header = document.querySelector('.site-header');
             const navLinks = document.querySelectorAll('.nav-link');
@@ -610,11 +574,8 @@
             const mobileOverlay = document.querySelector('.mobile-nav-overlay');
             const mobileLinks = document.querySelectorAll('.mobile-nav-link');
             const backToTop = document.querySelector('.back-to-top');
-            const yearSpan = document.getElementById('current-year');
+            document.getElementById('current-year').textContent = new Date().getFullYear();
 
-            if (yearSpan) yearSpan.textContent = new Date().getFullYear();
-
-            // Mobile menu toggle
             mobileToggle.addEventListener('click', () => {
                 const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
                 mobileToggle.setAttribute('aria-expanded', !expanded);
@@ -627,7 +588,6 @@
                 document.body.style.overflow = '';
             }));
 
-            // Active nav link on scroll (Intersection Observer)
             const sections = document.querySelectorAll('section[id]');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -642,16 +602,13 @@
             }, { rootMargin: '0px 0px -60% 0px' });
             sections.forEach(section => observer.observe(section));
 
-            // Back to top
             window.addEventListener('scroll', () => {
-                if (window.scrollY > 600) backToTop.classList.add('visible');
-                else backToTop.classList.remove('visible');
+                backToTop.classList.toggle('visible', window.scrollY > 600);
                 header.style.background = window.scrollY > 20 ? 'rgba(255,255,255,0.96)' : 'rgba(255,255,255,0.92)';
                 header.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.04)' : 'none';
             });
             backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-            // Smooth scroll for all anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
                     const target = document.querySelector(this.getAttribute('href'));
@@ -662,7 +619,6 @@
                 });
             });
 
-            // Service cards: clicking any card opens WhatsApp booking
             document.querySelectorAll('.service-card').forEach(card => {
                 card.addEventListener('click', () => {
                     window.open('https://wa.me/254722377327?text=Hello%2C%20I%20am%20interested%20in%20this%20beauty%20service.', '_blank');
